@@ -3,9 +3,7 @@ var pub_douban_api = "https://api.douban.com/v2/movie/"
 Page({
     data: {
         movies: [],
-        intheatersData: [],
-        intheaterTitle: "正在热映",
-        title: "加载中..."
+        title: "加载中...",
     },
     //事件处理函数
     bindViewTap: function () {
@@ -21,11 +19,11 @@ Page({
         //     icon: 'loading',
         //     duration: 10000
         // }, that.getInTheatersList())
-        that.getInTheatersList()
+        that.getTop250List()
     },
-    getInTheatersList: function () {
-        var that = this
-        var api_url = pub_douban_api + 'in_theaters'
+    getTop250List: function () {
+        var that = this;
+        var api_url = pub_douban_api + 'top250';
         wx.request({
             url: api_url,
             data: {},
@@ -39,8 +37,9 @@ Page({
                 that.setData({
                     title: res.data.title,
                     movies: res.data.subjects
-                })
-                console.log(111, res.data.subjects)
+                });
+
+                console.log(3333, that.data.comingSoonData)
             }
         })
     }

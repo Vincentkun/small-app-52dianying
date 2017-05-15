@@ -1,6 +1,8 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/coming/coming",
+    "pages/ranking/ranking",
     "pages/logs/logs",
     "pages/movie/movie",
     "pages/search/search",
@@ -15,18 +17,23 @@
   },
   "tabBar": {
     "backgroundColor":"#234",
+    "color": "#ddd",
+    "selectedColor": "#e36554",
     "list": [{
-      "iconPath":"image/home.png",
-      "selectedIconPath":"image/home.png",
-      "selectedColor": "#f00",
+      "iconPath":"image/hot.png",
+      "selectedIconPath":"image/hot_cur.png",
       "pagePath": "pages/index/index",
-      "text": "首页"
-    }, {
-      "iconPath":"image/infor.png",
-      "selectedIconPath":"image/infor.png",
-      "selectedColor": "#f00",
-      "pagePath": "pages/test/test",
-      "text": "我的"
+      "text": "热映"
+    },{
+      "iconPath":"image/come.png",
+      "selectedIconPath":"image/come_cur.png",
+      "pagePath": "pages/coming/coming",
+      "text": "即将"
+    },{
+      "iconPath":"image/rank.png",
+      "selectedIconPath":"image/rank_cur.png",
+      "pagePath": "pages/ranking/ranking",
+      "text": "Top"
     }]
   },
   "networkTimeout": {

@@ -1,4 +1,4 @@
-<!--电影排行榜-->
+<!--即将上映电影-->
 <view class="container">
   <scroll-view class="page-body" scroll-y="true">
       <navigator url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">

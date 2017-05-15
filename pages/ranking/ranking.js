@@ -14,16 +14,15 @@ Page({
     onLoad: function () {
         console.log('onLoad')
         var that = this
-        // wx.showToast({
-        //     title: that.data.title,
-        //     icon: 'loading',
-        //     duration: 10000
-        // }, that.getInTheatersList())
-        that.getTop250List()
+        wx.showToast({
+            title: that.data.title,
+            icon: 'loading',
+            duration: 10000
+        }, that.getTop250List())
     },
     getTop250List: function () {
         var that = this;
-        var api_url = pub_douban_api + 'top250';
+        var api_url = pub_douban_api + 'top250' + '?start=0&count=16';
         wx.request({
             url: api_url,
             data: {},
@@ -38,7 +37,6 @@ Page({
                     title: res.data.title,
                     movies: res.data.subjects
                 });
-
                 console.log(3333, that.data.comingSoonData)
             }
         })

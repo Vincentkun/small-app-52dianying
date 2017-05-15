@@ -14,12 +14,11 @@ Page({
     onLoad: function () {
         console.log('onLoad')
         var that = this
-        // wx.showToast({
-        //     title: that.data.title,
-        //     icon: 'loading',
-        //     duration: 10000
-        // }, that.getInTheatersList())
-        that.getComingSoonList()
+        wx.showToast({
+            title: that.data.title,
+            icon: 'loading',
+            duration: 10000
+        }, that.getComingSoonList())
     },
     getComingSoonList: function () {
         var that = this;

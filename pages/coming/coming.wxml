@@ -1,18 +1,18 @@
 <!--即将上映电影-->
-<view class="container">
-  <scroll-view class="page-body" scroll-y="true">
-      <navigator url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">
-        <view class="item">
-           <image class="poster" src="{{item.images.small}}"></image>      
-        <view class="meta">
-           <text class="title">{{item.title}}</text>
-           <text class="sub-title">{{item.original_title}}({{item.year}})</text>
-           <text class="artists" wx:for="{{item.directors}}">{{item.name}}</text>
+<view class="app">
+    <scroll-view class="movie-list-wrap" scroll-y="true">
+        <view class="movie-list">
+          <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">
+              <view class="movie-item-pic">
+                <image class="pic" src="{{item.images.small}}"></image>
+                <text class="rating">{{item.rating.average}}</text> 
+              </view>
+              <view class="movie-item-info">
+                <text class="title">{{item.title}}</text>
+                <text class="sub-title">{{item.original_title}}({{item.year}})</text>
+                <text class="artists" wx:for="{{item.directors}}">{{item.name}}</text>
+              </view>
+          </navigator>
         </view>
-        <text class="rating">
-          {{item.rating.average}}
-        </text>
-        </view>
-     </navigator>
-  </scroll-view>
+    </scroll-view>
 </view>

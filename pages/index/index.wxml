@@ -4,12 +4,11 @@
         <view class="movie-list">
           <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">
               <view class="movie-item-pic">
-                <image class="pic" src="{{item.images.small}}"></image> 
+                <image class="pic" src="{{item.images.large}}"></image> 
+                <text class="rating">{{item.rating.average}}</text>
               </view>
               <view class="movie-item-info">
                 <text class="title">{{item.title}}</text>
-                <text class="sub-title">{{item.original_title}}({{item.year}})</text>
-                <text class="artists" wx:for="{{item.directors}}">{{item.name}}</text>
               </view>
           </navigator>
         </view>

@@ -713,14 +713,14 @@ Page({
     onLoad: function () {
         console.log('onLoad')
         var that = this
-        wx.showToast({
-            title: that.data.title,
-            icon: 'loading',
-            duration: 1000,
-            success: function () {
-                // that.getInTheatersList()
-            }
-        })
+        // wx.showToast({
+        //     title: that.data.title,
+        //     icon: 'loading',
+        //     duration: 1000,
+        //     success: function () {
+        //         // that.getInTheatersList()
+        //     }
+        // })
     },
     getInTheatersList: function () {
         var that = this
@@ -734,7 +734,7 @@ Page({
             },
             success: function (res) {
                 //隐藏toast
-                wx.hideToast()
+                wx.hideToast() 
                 that.setData({
                     title: res.data.title,
                     movies: res.data.subjects

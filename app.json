@@ -11,12 +11,12 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#BBDEF8",
+    "navigationBarBackgroundColor": "#1e2931",
     "navigationBarTitleText": "看电影",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "backgroundColor":"#234",
+    "backgroundColor":"#1e2830",
     "color": "#ddd",
     "selectedColor": "#e36554",
     "list": [{

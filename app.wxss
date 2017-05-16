@@ -1,10 +1,36 @@
-/**app.wxss**/
-.container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+.app{
+  background-color: #3a4e5b;
+  color: #FFFFFF;
+}
+.movie-list{
+	display: -webkit-flex;
+	display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
   box-sizing: border-box;
+  padding: 0 24rpx;
+}
+.movie-item{
+	width: 50%;
+	background: #234;
+  box-sizing: border-box;
+}
+.movie-item:nth-child(2n+1){
+  padding-right: 16rpx;
+}
+.movie-item:nth-child(2n){
+  padding-left: 16rpx;
+}
+.movie-item-pic image{
+  width: 100%;
+  height: 300rpx;
+}
+.movie-item-info{
+  font-size: 32rpx;
+}
+.movie-item-info text{
+  display: block
 } 
+.movie-item-info .title{
+  
+}

@@ -6,8 +6,9 @@ Page({
 	},
 	onLoad: function(opts) {
 		var that = this;
+		//  opts.id
 		wx.request({
-			url: API_URL + opts.id,
+			url: API_URL + "26387939",
 			data: {},
 			method: 'GET',
 			header: {

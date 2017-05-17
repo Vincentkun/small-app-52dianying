@@ -1,53 +1,70 @@
-.app{
+page, .app {
   background-color: #3a4e5b;
   color: #FFFFFF;
+  font-size: 32rpx;
 }
-.movie-list{
-	display: -webkit-flex;
-	display: flex;
+
+.blur {    
+    -webkit-filter: blur(10px);
+       -moz-filter: blur(10px);
+        -ms-filter: blur(10px);    
+            filter: blur(10px);    
+}
+
+.movie-list {
+  display: -webkit-flex;
+  display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   box-sizing: border-box;
   padding: 24rpx 24rpx 0;
 }
-.movie-item{
-	width: 50%;
+
+.movie-item {
+  width: 50%;
   box-sizing: border-box;
 }
-.movie-item:nth-child(2n+1){
+
+.movie-item:nth-child(2n+1) {
   padding-right: 16rpx;
 }
-.movie-item:nth-child(2n){
+
+.movie-item:nth-child(2n) {
   padding-left: 16rpx;
 }
-.movie-item-pic{
+
+.movie-item-pic {
   position: relative;
 }
-.movie-item-pic image{
+
+.movie-item-pic image {
   width: 100%;
   height: 440rpx;
-  box-shadow:0px 5px 10px #000;
+  box-shadow: 0px 5px 10px #000;
 }
-.movie-item-pic .rating{
-    position: absolute;
-    right: 10rpx;
-    bottom: 20rpx;
-    width: 44rpx;
-    height: 44rpx;
-    line-height: 48rpx;
-    background-color: #e18204;
-    border-radius: 100%;
-    color:#FFF;
-    font-size: 22rpx;
-    text-align: center;
-    overflow: hidden;
-    box-shadow:0px 0px 5px rgba(0,0,0,.6);
+
+.movie-item-pic .rating {
+  position: absolute;
+  right: 10rpx;
+  bottom: 20rpx;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 48rpx;
+  background-color: #e18204;
+  border-radius: 100%;
+  color: #FFF;
+  font-size: 22rpx;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
 }
-.movie-item-info{
-  padding: 28rpx 0; 
+
+.movie-item-info {
+  padding: 28rpx 0;
   font-size: 32rpx;
 }
-.movie-item-info text{
+
+.movie-item-info text {
   display: block;
   padding: 0 10px;
   box-sizing: border-box;
@@ -58,7 +75,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-} 
-.movie-item-info .title{
-  
+}
+
+.movie-item-info .title {
+  text-shadow: 0px 1px 3px #333;
 }

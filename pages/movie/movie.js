@@ -96,6 +96,8 @@ var dbTest = {
 
 var API_URL = "https://api.douban.com/v2/movie/subject/"
 
+
+
 Page({
 	data: {
 		movie: dbTest
@@ -105,6 +107,7 @@ Page({
 		wx.setNavigationBarTitle({
 			title: dbTest.title
 		})
+        console.log(dbTest)
 		//  opts.id
 		// wx.request({
 		// 	url: API_URL + "26387939",

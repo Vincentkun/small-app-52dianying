@@ -1,17 +1,23 @@
 <!--电影详情-->
 <view class="app">
   <scroll-view scroll-y="true">
-    <view class="meta">
-      <image class="poster blur" src="{{movie.images.large}}" background-size="cover"></image>
-      <image class="poster" src="{{movie.images.large}}" background-size="cover"></image>
-      <text class="title">{{movie.title}}({{movie.year}})</text>
-      <text class="info">评分：{{movie.rating.average}}</text>
-      <text class="info">导演：<block wx:for="{{movie.directors}}"> {{item.name}} </block></text>
-      <text class="info">主演：<block wx:for="{{movie.casts}}"> {{item.name}} </block></text>
+    <view class="movie-item-details">
+      <image class="mid-blur blur" src="{{movie.images.small}}"></image>
+      <view class="move-item-info">
+        <view class="mii-info">
+          <text class="mii-title">{{movie.title}}({{movie.year}})</text>
+        </view>
+        <view class="mii-pic">
+          <image class="mii-img " src="{{movie.images.large}}"></image>
+          <text class="rating" wx:if="{{movie.rating.average > 0}}">{{movie.rating.average}}</text>
+        </view>
+      </view>
     </view>
-    <view class="summary">
-      <text class="label">摘要：</text>
-      <text class="content">{{movie.summary}}</text>
+    <view class="movie-item-cnt">
+      {{movie.summary}}
     </view>
+
+
+
   </scroll-view>
 </view>

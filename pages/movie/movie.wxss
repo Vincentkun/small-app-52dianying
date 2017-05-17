@@ -1,49 +1,64 @@
-/**index.wxss**/
-.userinfo {
+.movie-item-details {
+  position: relative;
+  width: 100%;
+  height: 500rpx;
+}
+
+.mid-blur {
+  width: 100%;
+  height: 500rpx;
+}
+
+.move-item-info {
+  display: -webkit-flex;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  padding-top: 6%;
+  box-sizing: border-box;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.mii-pic {
+  width: 45%;
+  position: relative;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.mii-pic .rating {
+  position: absolute;
+  left: 10rpx;
+  top: 330rpx;
+  width: 44rpx;
+  height: 44rpx;
+  line-height: 48rpx;
+  background-color: #e18204;
+  border-radius: 100%;
+  color: #FFF;
+  font-size: 22rpx;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, .6);
 }
 
-.usermotto {
-  margin-top: 200px;
+.mii-info {
+  width: 45%;
 }
 
-.window{
-  color: #4995fa;
-}
-.window-red{
-    color:#D23933;
-}
-
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.mii-img {
+  width: 90%;
+  height: 400rpx;
+  display: block;
+  box-shadow: 0px 3px 6px #000;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.mii-info text {
+  display: block;
 }
+.mii-title{
 
-.userinfo-nickname {
-  color: #aaa;
-}
-
-.usermotto {
-  margin-top: 200px;
 }

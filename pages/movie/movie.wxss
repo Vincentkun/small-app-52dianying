@@ -31,7 +31,7 @@
 
 .mii-pic .rating {
   position: absolute;
-  left: 10rpx;
+  left: 240rpx;
   top: 330rpx;
   width: 44rpx;
   height: 44rpx;
@@ -47,8 +47,9 @@
 
 .mii-info {
   width: 45%;
+  box-sizing: border-box;
+  padding-left: 3%;
 }
-
 .mii-img {
   width: 90%;
   height: 400rpx;
@@ -56,9 +57,62 @@
   box-shadow: 0px 3px 6px #000;
 }
 
-.mii-info text {
+.mill-text {
   display: block;
+  font-size: 30rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  padding: 5rpx 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .mii-title{
-
+  display: block;
+  font-size: 40rpx;
+  padding-top: 10%;
+  line-height: 44rpx;
+  max-height: 136rpx;
+  overflow: hidden;
+  margin-bottom: 20%;
+}
+.movie-item-cnt{
+  padding: 20rpx;
+}
+.mic-title{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 32rpx;
+  overflow: hidden;
+  position: relative;
+  padding-left: 24rpx;
+  margin-bottom: 20rpx;
+}
+.mic-sub-title{
+  padding-top: 12rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 26rpx;
+  overflow: hidden;
+  margin-bottom: 10rpx;
+}
+.mic-title .icon{
+  position: absolute;
+  left: 0;
+  top: 5rpx;
+  width: 10rpx;
+  height: 30rpx;
+  background-color: #e18204;
+}
+.mic-text{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  margin-bottom: 10rpx;
+  overflow: hidden;
+}
+.mic-summary{
+  line-height: 44rpx;
+  font-size: 24rpx;
+  text-indent: 20rpx;
 }

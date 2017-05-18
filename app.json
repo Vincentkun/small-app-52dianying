@@ -1,6 +1,5 @@
 {
   "pages":[
-    "pages/movie/movie",
     "pages/index/index",
     "pages/coming/coming",
     "pages/ranking/ranking",

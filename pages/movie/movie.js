@@ -94,45 +94,51 @@ var dbTest = {
     ]
 }
 
-var API_URL = "https://api.douban.com/v2/movie/subject/"
-
-
+var API_URL = "https://api.douban.com/v2/movie/subject/";
 
 Page({
-	data: {
-		movie: dbTest
-	},
-	onLoad: function (opts) {
-		var that = this;
-		wx.setNavigationBarTitle({
-			title: dbTest.title
-		})
-        console.log(dbTest)
-		//  opts.id
-		// wx.request({
-		// 	url: API_URL + "26387939",
-		// 	data: {},
-		// 	method: 'GET',
-		// 	header: {
-		// 		"Content-Type": "Json"
-		// 	},
-		// 	success: function (res) {
-		// 		// that.setData({
-		// 		// 	movie: res.data
-		// 		// });
-		// 		// 修改标题
-		// 		// wx.setNavigationBarTitle({
-		// 		// 	title: res.data.title
-		// 		// })
-		// 		console.log(res)
-				
-		// 	},
-		// 	fail: function () {
-		// 		// fail
-		// 	},
-		// 	complete: function () {
-		// 		// complete
-		// 	}
-		// })
-	}
+    data: {
+        movie: {},
+        imgUrls: [
+            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
+            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+        ],
+        indicatorDots: true,
+        autoplay: true,
+        interval: 3000,
+        duration: 1000,
+        toView: 'red',
+        scrollTop: 100
+    },
+    onLoad: function (opts) {
+        var that = this;
+        // console.log(dbTest)
+        //  opts.id
+        wx.request({
+        	url: API_URL + opts.id,
+        	data: {},
+        	method: 'GET',
+        	header: {
+        		"Content-Type": "Json"
+        	},
+        	success: function (res) {
+        		that.setData({
+        			movie: res.data
+        		});
+        		// 修改标题
+        		wx.setNavigationBarTitle({
+        			title: res.data.title
+        		})
+        		// console.log(res)
+
+        	},
+        	fail: function () {
+        		// fail
+        	},
+        	complete: function () {
+        		// complete
+        	}
+        })
+    }
 })

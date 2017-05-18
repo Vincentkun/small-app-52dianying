@@ -27,13 +27,17 @@
         <text class="label">主演：</text>
         <text class="content"><block wx:for="{{movie.casts}}" wx:key="*this"> {{item.name}} </block></text>
       </view>
-      <view class="mic-sub-title">简介:</view>
+      <view class="mic-sub-title">摘要:</view>
       <view class="mic-summary">
         <text class="content">{{movie.summary}}</text>
       </view>
-    </view>
-
-    
-
+      <view class="mic-title"><text class="icon"></text>演员</view>
+      <scroll-view class="scroll-movie-casts" scroll-x="true">
+        <view class="smc-cell" wx:for="{{movie.casts}}" wx:key="ScrollMovieCasts">
+          <image class="avatar" src="{{item.avatars.large}}"></image>
+          <text class="name">{{item.name}}</text>
+        </view>
+      </scroll-view>
+    </view>  
   </scroll-view>
 </view>

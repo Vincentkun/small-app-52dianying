@@ -50,6 +50,7 @@
   box-sizing: border-box;
   padding-left: 3%;
 }
+
 .mii-img {
   width: 90%;
   height: 400rpx;
@@ -67,7 +68,8 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
-.mii-title{
+
+.mii-title {
   display: block;
   font-size: 40rpx;
   padding-top: 10%;
@@ -76,10 +78,12 @@
   overflow: hidden;
   margin-bottom: 20%;
 }
-.movie-item-cnt{
+
+.movie-item-cnt {
   padding: 20rpx;
 }
-.mic-title{
+
+.mic-title {
   height: 40rpx;
   line-height: 40rpx;
   font-size: 32rpx;
@@ -88,7 +92,8 @@
   padding-left: 24rpx;
   margin-bottom: 20rpx;
 }
-.mic-sub-title{
+
+.mic-sub-title {
   padding-top: 12rpx;
   height: 32rpx;
   line-height: 32rpx;
@@ -96,7 +101,8 @@
   overflow: hidden;
   margin-bottom: 10rpx;
 }
-.mic-title .icon{
+
+.mic-title .icon {
   position: absolute;
   left: 0;
   top: 5rpx;
@@ -104,15 +110,49 @@
   height: 30rpx;
   background-color: #e18204;
 }
-.mic-text{
+
+.mic-text {
   height: 40rpx;
   line-height: 40rpx;
   font-size: 24rpx;
   margin-bottom: 10rpx;
   overflow: hidden;
 }
-.mic-summary{
+
+.mic-summary {
+  margin-bottom: 20rpx;
   line-height: 44rpx;
   font-size: 24rpx;
   text-indent: 20rpx;
+}
+
+.scroll-movie-casts {
+  width: 100%;
+  height: 200px;
+  white-space: nowrap;
+  vertical-align: top;
+}
+
+.smc-cell {
+  width: 200rpx;
+  height: 300rpx;
+  display: inline-block;
+  padding: 0 20rpx;
+}
+
+.smc-cell .avatar {
+  display: block;
+  width: 200rpx;
+  height: 300rpx;
+}
+
+.smc-cell .name {
+  padding: 20rpx 10rpx;
+  display: block;
+  height: 30rpx;
+  line-height: 26rpx;
+  text-align: center;
+  font-size: 24rpx;
+  overflow: hidden;
+  text-overflow: ellipsis
 }

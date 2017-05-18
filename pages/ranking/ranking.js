@@ -37,7 +37,6 @@ Page({
                     title: res.data.title,
                     movies: res.data.subjects
                 });
-                console.log(3333, that.data.comingSoonData)
             }
         })
     }

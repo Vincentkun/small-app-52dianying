@@ -2,7 +2,7 @@
 <view class="app">
     <scroll-view class="movie-list-wrap" scroll-y="true">
         <view class="movie-list">
-          <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">
+          <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}" wx:key="RankMovie">
               <view class="movie-item-pic">
                 <image class="pic" src="{{item.images.large}}"></image> 
                 <text class="rating" wx:if="{{item.rating.average > 0}}">{{item.rating.average}}</text>

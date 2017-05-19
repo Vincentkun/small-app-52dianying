@@ -1,10 +1,7 @@
 //local test data
 var dbTest = require('../../utils/localData/dataList.js').list;
-
 //fetch data
 var fetch = require('../../utils/fetch.js');
-
-var pub_douban_api = "https://api.douban.com/v2/movie/";
 
 Page({
     data: {

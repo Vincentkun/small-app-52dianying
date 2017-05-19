@@ -26,7 +26,6 @@ function _get(category, page, success, fail) {
 }
 
 
-
 module.exports = {
     _get: _get
 }

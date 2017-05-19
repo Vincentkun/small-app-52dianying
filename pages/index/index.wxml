@@ -13,7 +13,7 @@
           </navigator>
         </view>
         <view class="load-more">
-          <view class="load-more-tx" wx:if="{{hasMore}}">玩命加载中...</view>
+          <view class="load-more-tx" hidden="{{hidden}}" wx:if="{{hasMore}}">玩命加载中...</view>
           <view class="load-more-tx" wx:else><text>没有更多内容了</text></view>
         </view>
     </scroll-view>

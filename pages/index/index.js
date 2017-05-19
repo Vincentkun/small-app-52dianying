@@ -702,25 +702,30 @@ var pub_douban_api = "https://api.douban.com/v2/movie/";
 Page({
     data: {
         movies: dbTest,
-        title: "加载中..."
-    },
-    //事件处理函数
-    bindViewTap: function () {
-        wx.navigateTo({
-            url: '../logs/logs'
-        })
+        title: "加载中...",
+        page: 1,
+        hasMore: true,
+        scrollHeight: 0
     },
     onLoad: function () {
         console.log('onLoad')
         var that = this
-        wx.showToast({
-            title: that.data.title,
-            icon: 'loading',
-            duration: 1000,
-            success: function () {
-                // that.getInTheatersList()
+        // wx.showToast({
+        //     title: that.data.title,
+        //     icon: 'loading',
+        //     duration: 1000,
+        //     success: function () {
+        //         // that.getInTheatersList()vincent   
+        //     }
+        // })
+        wx.getSystemInfo({
+            success: function (res) {
+                console.info(res.windowHeight);
+                that.setData({
+                    scrollHeight: res.windowHeight
+                });
             }
-        })
+        });
     },
     getInTheatersList: function () {
         var that = this
@@ -741,5 +746,18 @@ Page({
                 })
             }
         })
-    }
+    },
+    loadMore: function (e) {
+        var that = this;
+
+        if (!this.data.hasMore) return
+        that.setData({
+            movies: that.data.movies.concat(dbTest),
+            hasMore: true
+        });
+
+        // that.setData({
+        //     hasMore: false
+        // });
+    },
 })

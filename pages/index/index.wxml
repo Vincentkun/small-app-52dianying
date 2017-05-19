@@ -1,6 +1,6 @@
 <!--电影排行榜-->
 <view class="app">
-    <scroll-view class="movie-list-wrap" scroll-y="true">
+    <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">
         <view class="movie-list">
           <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}" wx:key="HotMovie">
               <view class="movie-item-pic">
@@ -12,5 +12,11 @@
               </view>
           </navigator>
         </view>
+        <view class="load-more">
+          <view class="load-more-tx" wx:if="{{hasMore}}">玩命加载中...</view>
+          <view class="load-more-tx" wx:else><text>没有更多内容了</text></view>
+        </view>
     </scroll-view>
 </view>
+
+

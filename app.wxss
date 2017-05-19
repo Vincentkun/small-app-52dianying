@@ -80,3 +80,16 @@ page, .app {
 .movie-item-info .title {
   text-shadow: 0px 1px 3px #333;
 }
+
+.load-more{
+  padding-bottom: 20rpx;
+}
+
+.load-more-tx{
+  height: 38rpx;
+  line-height: 38rpx;
+  font-size: 28rpx;
+  text-align: center;
+  overflow: hidden;
+  color: #eee;
+}

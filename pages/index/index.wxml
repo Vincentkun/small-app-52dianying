@@ -1,4 +1,4 @@
-<!--电影排行榜-->
+<!--正在上映的电影-->
 <view class="app">
     <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">
         <view class="movie-list">
@@ -18,5 +18,3 @@
         </view>
     </scroll-view>
 </view>
-
-

@@ -6,10 +6,11 @@
 
 var pubURL = "https://api.douban.com/v2/movie/";
 
-function _get(category, page, success, fail) {
-  var page = page || 0;
-  var count = 10;
-  var apiUrl = pubURL + category + "?start=" + page + "&count=" + count;
+function _get(category, start, success, fail) {
+  var start = start || 0;
+  var count = 4;
+  var apiUrl = pubURL + category + "?start=" + start + "&count=" + count;
+  console.log(category,start,count)
   wx.request({
     url: apiUrl,
     header: {
@@ -18,6 +19,7 @@ function _get(category, page, success, fail) {
     method: 'GET',
     success: function (res) {
       success(res);
+      console.log(res)
     },
     fail: function (res) {
       fail(res);

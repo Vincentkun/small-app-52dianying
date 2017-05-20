@@ -59,7 +59,7 @@ Page({
         that.setData({
             lock: true
         });
-        fetch._get('in_theaters', ++that.data.page,
+        fetch._get('in_theaters', (++that.data.page + 4),
             function (res) {
                 //set data
                 that.setData({

@@ -1,5 +1,3 @@
-//local test data
-var dbTest = require('../../utils/localData/dataList.js').list;
 //fetch data
 var fetch = require('../../utils/fetch.js');
 
@@ -22,7 +20,7 @@ Page({
             icon: 'loading',
             duration: 1000,
             success: function () {
-                that.getInTheatersList()
+                that.getMoviesList()
             }
         });
         // 得到窗口高度, 并设置data 
@@ -36,7 +34,7 @@ Page({
             }
         });
     },
-    getInTheatersList: function () {
+    getMoviesList: function () {
         var that = this
         //fetch data
         fetch._get('in_theaters', that.data.page,
@@ -56,19 +54,18 @@ Page({
     },
     loadMore: function (e) {
         var that = this;
-        //没有更多时 后边不执行
-        if (!this.data.hasMore) return;
-        var ind = ++that.data.page;
-        console.log(888,ind);
-        if(1) return;
-
+        // 被锁 或 没有更多时 后边不执行
+        if (this.data.lock || !this.data.hasMore) return;
+        that.setData({
+            lock: true
+        });
         fetch._get('in_theaters', ++that.data.page,
             function (res) {
-                console.log(999,that.data.page)
                 //set data
                 that.setData({
                     movies: that.data.movies.concat(res.data.subjects),
-                    hasMore: true
+                    hasMore: true,
+                    lock: false
                 })
             },
             function (res) {
@@ -78,6 +75,5 @@ Page({
                     hasMore: false
                 });
             })
-
     }
 })

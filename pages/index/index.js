@@ -39,14 +39,21 @@ Page({
         //fetch data
         fetch._get('in_theaters', that.data.page,
             function (res) {
+                var list = res.data.subjects, len;
+                if (list) {
+                    len = list.length;
+                    if (len > 0) {
+                        //set data
+                        that.setData({
+                            title: res.data.title,
+                            movies: res.data.subjects,
+                            hidden: false,
+                            page: len
+                        })
+                    }
+                };
                 //隐藏toast
                 wx.hideToast()
-                //set data
-                that.setData({
-                    title: res.data.title,
-                    movies: res.data.subjects,
-                    hidden: false
-                })
             },
             function (res) {
                 console.log(res);
@@ -59,14 +66,26 @@ Page({
         that.setData({
             lock: true
         });
-        fetch._get('in_theaters', (++that.data.page + 4),
+        var curPage = that.data.page;
+        fetch._get('in_theaters', ++that.data.page,
             function (res) {
-                //set data
-                that.setData({
-                    movies: that.data.movies.concat(res.data.subjects),
-                    hasMore: true,
-                    lock: false
-                })
+                var list = res.data.subjects, len;
+                if (list && list.length > 0) {
+                    len = list.length;
+                    //set data
+                    that.setData({
+                        movies: that.data.movies.concat(res.data.subjects),
+                        hasMore: true,
+                        lock: false,
+                        page: curPage + len
+                    })
+
+                } else {
+                    // no more
+                    that.setData({
+                        hasMore: false
+                    });
+                }
             },
             function (res) {
                 console.log(res);

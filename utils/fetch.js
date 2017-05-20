@@ -8,7 +8,7 @@ var pubURL = "https://api.douban.com/v2/movie/";
 
 function _get(category, start, success, fail) {
   var start = start || 0;
-  var count = 4;
+  var count = 20;
   var apiUrl = pubURL + category + "?start=" + start + "&count=" + count;
   console.log(category,start,count)
   wx.request({

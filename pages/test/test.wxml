@@ -1,3 +1,0 @@
-<!-- This is our View -->
-<view> Hello {{name}}! </view>
-<button bindtap="changeName"> 快点我! </button>

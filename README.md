@@ -14,7 +14,7 @@
 - movie(电影详情页，点击电影列表进入)
 - search(搜索页面，搜索关键词，展现相关电影)
 
----
+
 
 豆瓣电影接口： https://developers.douban.com/wiki/?title=movie_v2
 

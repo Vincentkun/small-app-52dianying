@@ -10,11 +10,13 @@
 # 功能样式
 
 主要页面index,movie,search:
-- index(首页，调去豆瓣借口获取推荐电影列表)
-- movie(电影详情页，点击电影列表进入)
-- search(搜索页面，搜索关键词，展现相关电影)
+- index(首页，来自豆瓣正热映的电影)
+- coming(即将上映，来自豆瓣即将上映的电影)
+- ranking(电影排行榜，来自豆瓣Top250电影排行榜)
+- movie(电影详情页，来自豆瓣api电影详情信息)
+- search(搜索页面，搜索关键词，展现相关电影)`[待上线功能]`
 
-
+<br />
 
 豆瓣电影接口： https://developers.douban.com/wiki/?title=movie_v2
 

@@ -18,7 +18,7 @@
   "tabBar": {
     "backgroundColor":"#1e2830",
     "color": "#ddd",
-    "selectedColor": "#e36554",
+    "selectedColor": "#e85027",
     "list": [{
       "iconPath":"image/hot.png",
       "selectedIconPath":"image/hot_cur.png",

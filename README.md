@@ -9,7 +9,7 @@
 
 # 功能样式
 
-主要页面index,movie,search:
+主要页面 index, coming, ranking, movie, searching:
 - index (首页, 来自豆瓣正在热映的电影)
 - coming (即将上映，来自豆瓣即将上映的电影)
 - ranking (电影排行榜，来自豆瓣Top250电影排行榜)

@@ -6,8 +6,7 @@
     "pages/logs/logs",
     "pages/movie/movie",
     "pages/search/search",
-    "pages/sys/sys",
-    "pages/test/test"
+    "pages/sys/sys"
   ],
   "window":{
     "backgroundTextStyle":"light",

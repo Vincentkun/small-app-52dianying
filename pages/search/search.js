@@ -1,32 +1,34 @@
+
 var API_URL = API_URL = 'https://api.douban.com/v2/movie/search';
 
 Page({
-	data:{
-		movies:[]
+	data: {
+		movies: []
 	},
-	search:function (e){
+	search: function (e) {
 
-		if (!e.detail.value){
+		if (!e.detail.value) {
 			return;
 		}
+		
 		wx.showToast({
-			title:"加载中..",
-			icon:"loading",
-			duration:10000
+			title: "加载中..",
+			icon: "loading",
+			duration: 10000
 		});
 		var that = this;
 
 		wx.request({
-			url:API_URL + "?q=" + e.detail.value,
-			data:{},
+			url: API_URL + "?q=" + e.detail.value,
+			data: {},
 			header: {
-				'Content-Type':'json'
+				'Content-Type': 'json'
 			},
-			success:function (res){
+			success: function (res) {
 				// console.log(res.data);
 				wx.hideToast();
 				that.setData({
-					movies:res.data.subjects
+					movies: res.data.subjects
 				});
 			}
 		});

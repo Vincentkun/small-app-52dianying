@@ -1,4 +1,7 @@
 <!--正在上映的电影-->
+<view class="page-header">
+  <input class="page-header-text" placeholder="输入搜索关键词" auto-focus bindchange="search"/>
+</view>
 <view class="app">
     <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">
         <view class="movie-list">

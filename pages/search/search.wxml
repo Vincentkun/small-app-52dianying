@@ -1,18 +1,22 @@
 <view class="page-header">
   <input class="page-header-text" placeholder="输入搜索关键词" auto-focus bindchange="search"/>
 </view>
-<scroll-view class="page-body" scroll-y="true">
-	<navigator url="../movie/movie?id={{item.id}}" wx:for="{{movies}}">
-		<view class="item">
-			<image class="poster" src="{{item.images.small}}"></image>
-			<view class="meta">
-				<text class="title">{{item.title}}</text>
-				<text class="sub-title">{{item.original_title}}({{item.year}})</text>
-				<text class="artists"><text wx:for="{{item.directors}}">{{item.name}}</text></text>
-			</view>
-			<view class="rating">
-				<text>{{item.rating.average}}</text>
-			</view>
-		</view>
-	</navigator>
-</scroll-view>
+<view class="app">
+    <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">
+        <view class="movie-list">
+          <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}" wx:key="HotMovie">
+              <view class="movie-item-pic">
+                <image class="pic" src="{{item.images.large}}"></image> 
+                <text class="rating" wx:if="{{item.rating.average > 0}}">{{item.rating.average}}</text>
+              </view>
+              <view class="movie-item-info">
+                <text class="title">{{item.title}}</text>
+              </view>
+          </navigator>
+        </view>
+        <view class="load-more">
+          <view class="load-more-tx" hidden="{{hidden}}" wx:if="{{hasMore}}">玩命加载中...</view>
+          <view class="load-more-tx" wx:else><text>没有更多内容了</text></view>
+        </view>
+    </scroll-view>
+</view>

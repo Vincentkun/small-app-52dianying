@@ -94,5 +94,8 @@ Page({
                     hasMore: false
                 });
             })
+    },
+    search: function(){
+       console.log('search') 
     }
 })

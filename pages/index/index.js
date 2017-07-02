@@ -12,7 +12,7 @@ Page({
 		lock: false
 	},
 	onLoad: function() {
-		console.log('onLoad');
+		// console.log('onLoad');
 		var that = this;
 		// Toast提示
 		wx.showToast({
@@ -102,7 +102,9 @@ Page({
 			}
 		);
 	},
-	search: function() {
-		console.log('search');
+	viewSearch: function() {
+		wx.navigateTo({
+			url: '../search/search'
+		})
 	}
 });

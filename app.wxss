@@ -17,8 +17,7 @@ page, .app {
   flex-direction: row;
   flex-wrap: wrap;
   box-sizing: border-box;
-  /*padding: 12rpx 24rpx 0;*/
-  padding: 24rpx 24rpx 0;
+  padding: 14rpx 24rpx 0;
 }
 
 .movie-item {
@@ -97,18 +96,20 @@ page, .app {
 
 .page-header {
     position: relative;
-    padding: 10rpx 0 10rpx;
-    display: none;
+    padding: 12rpx 0;
 }
 .page-header-text{
-    /*color: #FFF;*/
-    color: antiquewhite;
+    color: #FFF;
+    color: azure;
     padding-left: 20rpx;
     box-sizing: border-box;
     font-size: 32rpx;
 }
+.page-header-text-plc{
+  color: #aaa;
+}
 .page-header-icon{
     position: absolute;
     right: 30rpx;
-    top: 18rpx;
+    top: 22rpx;
 }

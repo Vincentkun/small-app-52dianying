@@ -7,7 +7,7 @@
 var pubURL = 'https://api.douban.com/v2/movie/';
 
 // local data
-// const localData = require('./localData/dataList.js');
+const localData = require('./localData/dataList.js');
 
 
 function _get(category, start, success, fail) {
@@ -18,24 +18,24 @@ function _get(category, start, success, fail) {
 	// console.log(category, start, count);
 
 	// Get data from Douban API
-	wx.request({
-		url: apiUrl,
-		header: {
-			// 'Content-Type': 'application/json'
-			'Content-Type': 'json'
-		},
-		method: 'GET',
-		success: function(res) {
-			success(res);
-			console.log(222,res);
-		},
-		fail: function(res) {
-			fail(res);
-		}
-	});
+	// wx.request({
+	// 	url: apiUrl,
+	// 	header: {
+	// 		// 'Content-Type': 'application/json'
+	// 		'Content-Type': 'json'
+	// 	},
+	// 	method: 'GET',
+	// 	success: function(res) {
+	// 		success(res);
+	// 		console.log(222,res);
+	// 	},
+	// 	fail: function(res) {
+	// 		fail(res);
+	// 	}
+	// });
 
 	// Local data test
-	// success(localData);
+	success(localData);
 }
 
 module.exports = {

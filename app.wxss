@@ -17,7 +17,8 @@ page, .app {
   flex-direction: row;
   flex-wrap: wrap;
   box-sizing: border-box;
-  padding: 12rpx 24rpx 0;
+  /*padding: 12rpx 24rpx 0;*/
+  padding: 24rpx 24rpx 0;
 }
 
 .movie-item {
@@ -97,6 +98,7 @@ page, .app {
 .page-header {
     position: relative;
     padding: 10rpx 0 10rpx;
+    display: none;
 }
 .page-header-text{
     /*color: #FFF;*/

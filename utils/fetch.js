@@ -7,7 +7,7 @@
 var pubURL = 'https://api.douban.com/v2/movie/';
 
 // local data
-const localData = require('./localData/dataList.js');
+// const localData = require('./localData/dataList.js');
 
 
 function _get(category, start, success, fail) {

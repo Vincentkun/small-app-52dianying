@@ -1,24 +1,26 @@
 <view class="page-header">
   <input class="page-header-text" placeholder="输入搜索关键词" auto-focus />
-   <icon catchtap="search" type="search" size="16" color="white"/>
+  <icon class="page-header-icon" catchtap="search" type="search" size="14" color="white" />
 </view>
 <!--正在上映的电影-->
 <view class="app">
-    <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">
-        <view class="movie-list">
-          <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}" wx:key="HotMovie">
-              <view class="movie-item-pic">
-                <image class="pic" src="{{item.images.large}}"></image> 
-                <text class="rating" wx:if="{{item.rating.average > 0}}">{{item.rating.average}}</text>
-              </view>
-              <view class="movie-item-info">
-                <text class="title">{{item.title}}</text>
-              </view>
-          </navigator>
+  <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">
+    <view class="movie-list">
+      <navigator class="movie-item" url="../movie/movie?id={{item.id}}" wx:for="{{movies}}" wx:key="HotMovie">
+        <view class="movie-item-pic">
+          <image class="pic" src="{{item.images.large}}"></image>
+          <text class="rating" wx:if="{{item.rating.average > 0}}">{{item.rating.average}}</text>
         </view>
-        <view class="load-more">
-          <view class="load-more-tx" hidden="{{hidden}}" wx:if="{{hasMore}}">玩命加载中...</view>
-          <view class="load-more-tx" wx:else><text>没有更多内容了</text></view>
+        <view class="movie-item-info">
+          <text class="title">{{item.title}}</text>
         </view>
-    </scroll-view>
+      </navigator>
+    </view>
+    <view class="load-more">
+      <view class="load-more-tx" hidden="{{hidden}}" wx:if="{{hasMore}}">玩命加载中...</view>
+      <view class="load-more-tx" wx:else>
+        <text>没有更多内容了</text>
+      </view>
+    </view>
+  </scroll-view>
 </view>

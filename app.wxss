@@ -93,3 +93,20 @@ page, .app {
   overflow: hidden;
   color: #eee;
 }
+
+.page-header {
+    position: relative;
+    padding-top: 10rpx;
+}
+.page-header-text{
+    /*color: #FFF;*/
+    color: antiquewhite;
+    padding-left: 20rpx;
+    box-sizing: border-box;
+    font-size: 28rpx;
+}
+.page-header-icon{
+    position: absolute;
+    right: 30rpx;
+    top: 15rpx;
+}

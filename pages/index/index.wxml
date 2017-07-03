@@ -1,6 +1,7 @@
 <view class="page-header" hidden="{{hidden}}">
-  <input class="page-header-text" placeholder-class="page-header-text-plc" bindfocus="viewSearch" placeholder="输入搜索关键词" />
-  <icon class="page-header-icon" catchtap="search" type="search" size="14" color="white" />
+  <input class="page-header-text" placeholder-class="page-header-text-plc" disabled="true" placeholder="输入搜索关键词" />
+  <icon class="page-header-icon" type="search" size="14" color="white" />
+  <view class="page-header-cove" catchtap="viewSearch"></view>
 </view>
 <!--正在上映的电影-->
 <view class="app">

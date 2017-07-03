@@ -94,7 +94,7 @@ Page({
 				}
 			},
 			function(res) {
-				console.log(res);
+				// console.log(res);
 				// no more
 				that.setData({
 					hasMore: false

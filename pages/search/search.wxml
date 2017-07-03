@@ -1,6 +1,6 @@
 <view class="page-header">
-  <input class="page-header-text" placeholder-class="page-header-text-plc" placeholder="输入搜索关键词" />
-  <icon class="page-header-icon" catchtap="search" type="search" size="14" color="white" />
+  <input class="page-header-text" bindinput="userInput" bindconfirm="search" placeholder-class="page-header-text-plc" placeholder="输入搜索关键词" auto-focus />
+  <icon class="page-header-icon" catchtap="search"  type="search" size="14" color="white" />
 </view>
 <view class="app">
   <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">
@@ -15,9 +15,8 @@
         </view>
       </navigator>
     </view>
-    <view class="load-more">
-      <view class="load-more-tx" hidden="{{hidden}}" wx:if="{{hasMore}}">玩命加载中...</view>
-      <view class="load-more-tx" wx:else>
+    <view class="load-more" hidden="{{hidden}}">
+      <view class="load-more-tx">
         <text>没有更多内容了</text>
       </view>
     </view>

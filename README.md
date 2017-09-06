@@ -5,7 +5,7 @@
 
 <br />
 
-![Alt text](/image/demo/52kdy.gif)
+![Alt text](52kdy.gif)
 
 <br />
 

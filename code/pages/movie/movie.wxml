@@ -2,7 +2,7 @@
 <view class="app">
   <scroll-view scroll-y="true">
     <view class="movie-item-details">
-      <image class="mid-blur blur" src="{{movie.images.small}}"></image>
+      <image wx:if="{{movie.images.small}}" class="mid-blur blur" src="{{movie.images.small}}"></image>
       <view class="move-item-info">
         <view class="mii-info">
             <text class="mii-title">{{movie.title}}</text>
@@ -12,7 +12,7 @@
             <text class="mill-text mill-type">类型: {{movie.genres}}</text>
         </view>
         <view class="mii-pic">
-          <image class="mii-img " src="{{movie.images.large}}"></image>
+          <image wx:if="{{movie.images.large}}" class="mii-img " src="{{movie.images.large}}"></image>
           <text class="rating" wx:if="{{movie.rating.average > 0}}">{{movie.rating.average}}</text>
         </view>
       </view>

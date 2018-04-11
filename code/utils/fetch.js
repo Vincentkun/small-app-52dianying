@@ -4,8 +4,8 @@
  * fail 失败的回调
  */
 
-var pubURL = 'https://api.douban.com/v2/movie/';
-var pubURL = 'http://thecity.com/v2/movie/';
+// var pubURL = 'https://api.douban.com/v2/movie/';
+var pubURL = 'https://douban.uieee.com/v2/movie/';
 
 
 // local data
@@ -23,8 +23,9 @@ function _get(category, start, success, fail) {
 	wx.request({
 		url: apiUrl,
 		header: {
-			'Content-Type': 'application/json'
-			// 'Content-Type': 'json'
+			// 'Content-Type': 'application/json',
+			// 'Content-Type': 'json',
+       "Content-Type": "application/text"
 		},
 		method: 'GET',
 		success: function(res) {

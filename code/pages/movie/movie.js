@@ -1,4 +1,5 @@
-var API_URL = "https://api.douban.com/v2/movie/subject/";
+// var API_URL = "https://api.douban.com/v2/movie/subject/";
+var API_URL = 'https://douban.uieee.com/v2/movie/subject/';
 
 Page({
     data: {

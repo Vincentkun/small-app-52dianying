@@ -3,6 +3,7 @@
   <icon class="page-header-icon" type="search" size="14" color="white" />
   <view class="page-header-cove" catchtap="viewSearch"></view>
 </view>
+
 <!--正在上映的电影-->
 <view class="app">
   <scroll-view class="movie-list-wrap" scroll-y="true" style="height:{{scrollHeight}}px;" bindscrolltolower="loadMore">

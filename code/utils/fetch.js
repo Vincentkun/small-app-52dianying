@@ -5,6 +5,8 @@
  */
 
 var pubURL = 'https://api.douban.com/v2/movie/';
+var pubURL = 'http://thecity.com/v2/movie/';
+
 
 // local data
 // const localData = require('./localData/dataList.js');
@@ -21,8 +23,8 @@ function _get(category, start, success, fail) {
 	wx.request({
 		url: apiUrl,
 		header: {
-			// 'Content-Type': 'application/json'
-			'Content-Type': 'json'
+			'Content-Type': 'application/json'
+			// 'Content-Type': 'json'
 		},
 		method: 'GET',
 		success: function(res) {

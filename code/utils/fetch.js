@@ -19,6 +19,8 @@ function _get(category, start, success, fail) {
 
 	// console.log(category, start, count);
 
+  return;
+
 	// Get data from Douban API
 	wx.request({
 		url: apiUrl,

@@ -1,0 +1,8 @@
+<view class="section v-video">
+  <video class="v" id="myVideo" wx:if="{{src}}" src="{{src}}" poster="{{poster}}" danmu-list="{{danmuList}}" enable-danmu danmu-btn controls></video>
+  <view class="btn-area">
+    <button class="btn up" bindtap="bindButtonTap">上传视频</button>
+    <input class="inp" bindblur="bindInputBlur" placeholder="这里可以输入弹幕喔~" />
+    <button class="btn dmb" bindtap="bindSendDanmu">发送弹幕</button>
+  </view>
+</view>

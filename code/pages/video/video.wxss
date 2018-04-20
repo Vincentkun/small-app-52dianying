@@ -1,0 +1,13 @@
+.v-video{
+  width: 100%;
+}
+.v-video .v{
+  width: 100%;
+}
+.v-video .inp{
+  width: 80%;
+  margin-left: 10%;
+}
+.v-video .btn{
+  width: 60%;
+}

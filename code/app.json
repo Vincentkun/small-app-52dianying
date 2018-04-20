@@ -1,11 +1,12 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/coming/coming",
     "pages/ranking/ranking",
+    "pages/coming/coming",
     "pages/logs/logs",
     "pages/movie/movie",
     "pages/search/search",
+    "pages/video/video",
     "pages/sys/sys"
   ],
   "window":{
@@ -24,15 +25,15 @@
       "pagePath": "pages/index/index",
       "text": "热映"
     },{
+      "iconPath": "image/rank.png",
+      "selectedIconPath": "image/rank_cur.png",
+      "pagePath": "pages/ranking/ranking",
+      "text": "新片榜"
+    },{
       "iconPath":"image/come.png",
       "selectedIconPath":"image/come_cur.png",
       "pagePath": "pages/coming/coming",
       "text": "即将"
-    },{
-      "iconPath":"image/rank.png",
-      "selectedIconPath":"image/rank_cur.png",
-      "pagePath": "pages/ranking/ranking",
-      "text": "Top"
     }]
   },
   "networkTimeout": {

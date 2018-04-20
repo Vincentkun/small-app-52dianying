@@ -36,7 +36,7 @@ Page({
     getMoviesList: function () {
         var that = this
         //fetch data
-        fetch._get('top250', that.data.page,
+        fetch._get('new_movies', that.data.page,
             function (res) {
                 var list = res.data.subjects, len;
                 if (list) {

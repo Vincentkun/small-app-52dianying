@@ -36,6 +36,7 @@ Page({
 	},
 	getMoviesList: function() {
 		var that = this;
+    
 		//fetch data
 		fetch._get(
 			'in_theaters',
@@ -47,6 +48,7 @@ Page({
 					len = list.length;
 					if (len > 0) {
 						//set data
+            // console.log(list)
 						that.setData({
 							title: res.data.title,
 							movies: res.data.subjects,

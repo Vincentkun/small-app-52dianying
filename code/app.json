@@ -1,10 +1,10 @@
 {
   "pages":[
+    "pages/movie/movie",
     "pages/index/index",
     "pages/ranking/ranking",
     "pages/coming/coming",
     "pages/logs/logs",
-    "pages/movie/movie",
     "pages/search/search",
     "pages/video/video",
     "pages/sys/sys"

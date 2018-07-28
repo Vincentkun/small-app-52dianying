@@ -9,7 +9,7 @@ var pubURL = 'https://douban.uieee.com/v2/movie/';
 
 
 // local data
-// const localData = require('./localData/dataList.js');
+const localData = require('./localData/dataList.js');
 
 
 function _get(category, start, success, fail) {
@@ -19,14 +19,14 @@ function _get(category, start, success, fail) {
 
 	// console.log(category, start, count);
 
+  // Local data test
+  success(localData);
   return;
 
 	// Get data from Douban API
 	wx.request({
 		url: apiUrl,
 		header: {
-			// 'Content-Type': 'application/json',
-			// 'Content-Type': 'json',
        "Content-Type": "application/text"
 		},
 		method: 'GET',
@@ -37,9 +37,6 @@ function _get(category, start, success, fail) {
 			fail(res);
 		}
 	});
-
-	// Local data test
-	// success(localData);
 }
 
 module.exports = {

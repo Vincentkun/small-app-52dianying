@@ -1,6 +1,10 @@
 // var API_URL = "https://api.douban.com/v2/movie/subject/";
 var API_URL = 'https://douban.uieee.com/v2/movie/subject/';
 
+
+// local data
+const localData = require('../../utils/localData/dataMovie.js');
+
 Page({
     data: {
         movie: {},
@@ -13,6 +17,20 @@ Page({
     },
     onLoad: function (opts) {
         var that = this;
+
+      // Test
+        that.setData({
+          movie: localData.data
+        });
+
+        wx.setNavigationBarTitle({
+          title: localData.data.title
+        })
+
+        return;
+
+        // Online
+
         wx.request({
         	url: API_URL + opts.id,
         	data: {},
@@ -21,6 +39,7 @@ Page({
         		"Content-Type": "Json"
         	},
         	success: function (res) {
+            
         		that.setData({
         			movie: res.data
         		});

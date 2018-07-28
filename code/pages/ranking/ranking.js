@@ -71,6 +71,7 @@ Page({
                 var list = res.data.subjects, len;
                 if (list && list.length > 0) {
                     len = list.length;
+                    
                     //set data
                     that.setData({
                         movies: that.data.movies.concat(res.data.subjects),

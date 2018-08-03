@@ -34,18 +34,14 @@
       </view>
       <view class="mic-title"><text class="icon"></text>电影海报</view>
 
-      <swiper indicator-dots="{{indicatorDots}}"
-      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-      <block wx:for="{{movie.photos}}" wx:key="ScrollMovieCasts">
-        <swiper-item>
-          <image src="{{item.image}}" class="slide-image"  height="150"/>
-        </swiper-item>
-      </block>
-    </swiper>
-    <button bindtap="changeIndicatorDots"> indicator-dots </button>
-    <button bindtap="changeAutoplay"> autoplay </button>
-    <slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
-    <slider bindchange="durationChange" show-value min="1000" max="10000"/> duration
+      <swiper class="mic-photos" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{movie.photos}}" wx:key="ScrollMoviePhotos">
+          <swiper-item wx:if="{{ index < 4 }}">
+            <image src="{{item.image}}" bindtap='previewImg' data-index='{{index}}' data-data='{{movie.photos}}' class="slide-image"
+              width="100%" height="150" />
+          </swiper-item>
+        </block>
+      </swiper>
 
       <view class="mic-title"><text class="icon"></text>演员</view>
       <scroll-view class="scroll-movie-casts" scroll-x="true">
@@ -56,11 +52,4 @@
       </scroll-view>
     </view>  
   </scroll-view>
-</view>
-
-
-<view class='imgList'>      
-  <view class='imgList-li' wx:for='{{movie.casts}}' wx:key="*this">
-    <image class='img' src='{{item.avatars.large}}' data-index='{{index}}' data-arr='{{movie.casts}}' bindtap='previewImg'></image>
-  </view>
 </view>

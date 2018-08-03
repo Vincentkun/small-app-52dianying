@@ -10,9 +10,10 @@
             <text class="mill-text mill-year">年份: {{movie.year}}</text>
             <text class="mill-text mill-country">国家: {{movie.countries}}</text>
             <text class="mill-text mill-type">类型: {{movie.genres}}</text>
+            <text class="mill-text mill-pubdates">{{movie.pubdates}}</text>
         </view>
         <view class="mii-pic">
-          <image wx:if="{{movie.images.large}}" class="mii-img " src="{{movie.images.large}}"></image>
+          <image wx:if="{{movie.images.large}}" class="mii-img " src="{{movie.images.large}}" bindtap='previewImg'></image>
           <text class="rating" wx:if="{{movie.rating.average > 0}}">{{movie.rating.average}}</text>
         </view>
       </view>
@@ -31,6 +32,21 @@
       <view class="mic-summary">
         <text class="content">{{movie.summary}}</text>
       </view>
+      <view class="mic-title"><text class="icon"></text>电影海报</view>
+
+      <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{movie.photos}}" wx:key="ScrollMovieCasts">
+        <swiper-item>
+          <image src="{{item.image}}" class="slide-image"  height="150"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <button bindtap="changeIndicatorDots"> indicator-dots </button>
+    <button bindtap="changeAutoplay"> autoplay </button>
+    <slider bindchange="intervalChange" show-value min="500" max="2000"/> interval
+    <slider bindchange="durationChange" show-value min="1000" max="10000"/> duration
+
       <view class="mic-title"><text class="icon"></text>演员</view>
       <scroll-view class="scroll-movie-casts" scroll-x="true">
         <view class="smc-cell" wx:for="{{movie.casts}}" wx:key="ScrollMovieCasts">
@@ -43,3 +59,8 @@
 </view>
 
 
+<view class='imgList'>      
+  <view class='imgList-li' wx:for='{{movie.casts}}' wx:key="*this">
+    <image class='img' src='{{item.avatars.large}}' data-index='{{index}}' data-arr='{{movie.casts}}' bindtap='previewImg'></image>
+  </view>
+</view>

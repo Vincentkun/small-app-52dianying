@@ -156,3 +156,20 @@
   overflow: hidden;
   text-overflow: ellipsis
 }
+
+.mill-pubdates{
+  margin-top: 10rpx;
+  color: aquamarine;
+}
+
+
+.imgList{
+  width: 100%;
+}
+.imgList .imgList-li{
+  width: 100%;
+}
+.imgList .imgList-li .img{
+  width: 400rpx;
+  height: 400rpx;
+}

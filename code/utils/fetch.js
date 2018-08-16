@@ -19,21 +19,21 @@ function _get(category, start, success, fail) {
 
 	// console.log(category, start, count);
 
-  // Local data test
-  success(localData);
-  return;
+	// Local data test
+	success(localData);
+	return;
 
 	// Get data from Douban API
 	wx.request({
 		url: apiUrl,
 		header: {
-       "Content-Type": "application/text"
+			"Content-Type": "application/text"
 		},
 		method: 'GET',
-		success: function(res) {
+		success: function (res) {
 			success(res);
 		},
-		fail: function(res) {
+		fail: function (res) {
 			fail(res);
 		}
 	});

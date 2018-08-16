@@ -1,14 +1,16 @@
-page, .app {
+page,
+.app {
   background-color: #3a4e5b;
+  /* background-color: #055064; */
   color: #FFFFFF;
   font-size: 32rpx;
 }
 
-.blur {    
-    -webkit-filter: blur(12px);
-       -moz-filter: blur(12px);
-        -ms-filter: blur(12px);    
-            filter: blur(12px);    
+.blur {
+  -webkit-filter: blur(12px);
+  -moz-filter: blur(12px);
+  -ms-filter: blur(12px);
+  filter: blur(12px);
 }
 
 .movie-list {
@@ -81,11 +83,11 @@ page, .app {
   text-shadow: 0px 1px 3px #333;
 }
 
-.load-more{
+.load-more {
   padding-bottom: 20rpx;
 }
 
-.load-more-tx{
+.load-more-tx {
   height: 38rpx;
   line-height: 38rpx;
   font-size: 28rpx;
@@ -95,10 +97,11 @@ page, .app {
 }
 
 .page-header {
-    position: relative;
-    padding: 12rpx 0;
+  position: relative;
+  padding: 12rpx 0;
 }
-.page-header-cove{
+
+.page-header-cove {
   position: absolute;
   left: 0;
   top: 0;
@@ -106,19 +109,22 @@ page, .app {
   height: 100%;
   z-index: 10;
 }
-.page-header-text{
-    color: #FFF;
-    color: azure;
-    padding-left: 20rpx;
-    box-sizing: border-box;
-    font-size: 32rpx;
-    margin-right: 70rpx;
+
+.page-header-text {
+  color: #FFF;
+  color: azure;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+  font-size: 32rpx;
+  margin-right: 70rpx;
 }
-.page-header-text-plc{
+
+.page-header-text-plc {
   color: #aaa;
 }
-.page-header-icon{
-    position: absolute;
-    right: 30rpx;
-    top: 22rpx;
+
+.page-header-icon {
+  position: absolute;
+  right: 30rpx;
+  top: 22rpx;
 }

@@ -1,55 +1,63 @@
 <!--电影详情-->
 <view class="app">
-  <scroll-view scroll-y="true">
-    <view class="movie-item-details">
-      <image wx:if="{{movie.images.small}}" class="mid-blur blur" src="{{movie.images.small}}"></image>
-      <view class="move-item-info">
-        <view class="mii-info">
-            <text class="mii-title">{{movie.title}}</text>
-            <text class="mill-text mill-rate" wx:if="{{movie.rating.average > 0}}">评分: {{movie.rating.average}}</text>
-            <text class="mill-text mill-year">年份: {{movie.year}}</text>
-            <text class="mill-text mill-country">国家: {{movie.countries}}</text>
-            <text class="mill-text mill-type">类型: {{movie.genres}}</text>
-            <text class="mill-text mill-pubdates">{{movie.pubdates}}</text>
-        </view>
-        <view class="mii-pic">
-          <image wx:if="{{movie.images.large}}" class="mii-img " src="{{movie.images.large}}" bindtap='previewImg'></image>
-          <text class="rating" wx:if="{{movie.rating.average > 0}}">{{movie.rating.average}}</text>
-        </view>
+  <view class="movie-item-details">
+    <image wx:if="{{movie.images.small}}" class="mid-blur blur" src="{{movie.images.small}}"></image>
+    <view class="move-item-info">
+      <view class="mii-info">
+        <text class="mii-title">{{movie.title}}</text>
+        <text class="mill-text mill-rate" wx:if="{{movie.rating.average > 0}}">评分: {{movie.rating.average}}</text>
+        <text class="mill-text mill-year">年份: {{movie.year}}</text>
+        <text class="mill-text mill-country">国家: {{movie.countries}}</text>
+        <text class="mill-text mill-type">类型: {{movie.genres}}</text>
+        <text class="mill-text mill-pubdates">{{movie.pubdates}}</text>
+      </view>
+      <view class="mii-pic">
+        <image wx:if="{{movie.images.large}}" class="mii-img " src="{{movie.images.large}}" bindtap='previewImg'></image>
+        <text class="rating" wx:if="{{movie.rating.average > 0}}">{{movie.rating.average}}</text>
       </view>
     </view>
-    <view class="movie-item-cnt">
-      <view class="mic-title"><text class="icon"></text>影片介绍</view>
-      <view class="mic-text">
-        <text class="label">导演：</text>
-        <text class="content"><block wx:for="{{movie.directors}}" wx:key="*this"> {{item.name}} </block></text>
+  </view>
+  <view class="movie-item-cnt">
+    <view class="mic-title">
+      <text class="icon"></text>影片介绍</view>
+    <view class="mic-text">
+      <text class="label">导演：</text>
+      <text class="content">
+        <block wx:for="{{movie.directors}}" wx:key="*this"> {{item.name}} </block>
+      </text>
+    </view>
+    <view class="mic-text">
+      <text class="label">主演：</text>
+      <text class="content">
+        <block wx:for="{{movie.casts}}" wx:key="*this"> {{item.name}} </block>
+      </text>
+    </view>
+    <view class="mic-sub-title">简介:</view>
+    <view class="mic-summary">
+      <text class="content">{{movie.summary}}</text>
+    </view>
+    <view class="mic-title">
+      <text class="icon"></text>电影海报</view>
+    <swiper class="mic-photos" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{movie.photos}}" wx:key="ScrollMoviePhotos">
+        <swiper-item wx:if="{{ index < 4 }}">
+          <image src="{{item.image}}" bindtap='previewImg' data-index='{{index}}' data-data='{{movie.photos}}' class="slide-image"
+            width="100%" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="mic-title">
+      <text class="icon"></text>演员</view>
+    <scroll-view class="scroll-movie-casts" scroll-x="true">
+      <view class="smc-cell" wx:for="{{movie.casts}}" wx:key="ScrollMovieCasts">
+        <image class="avatar" src="{{item.avatars.large}}"></image>
+        <text class="name">{{item.name}}</text>
       </view>
-      <view class="mic-text">
-        <text class="label">主演：</text>
-        <text class="content"><block wx:for="{{movie.casts}}" wx:key="*this"> {{item.name}} </block></text>
-      </view>
-      <view class="mic-sub-title">摘要:</view>
-      <view class="mic-summary">
-        <text class="content">{{movie.summary}}</text>
-      </view>
-      <view class="mic-title"><text class="icon"></text>电影海报</view>
-
-      <swiper class="mic-photos" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block wx:for="{{movie.photos}}" wx:key="ScrollMoviePhotos">
-          <swiper-item wx:if="{{ index < 4 }}">
-            <image src="{{item.image}}" bindtap='previewImg' data-index='{{index}}' data-data='{{movie.photos}}' class="slide-image"
-              width="100%" height="150" />
-          </swiper-item>
-        </block>
-      </swiper>
-
-      <view class="mic-title"><text class="icon"></text>演员</view>
-      <scroll-view class="scroll-movie-casts" scroll-x="true">
-        <view class="smc-cell" wx:for="{{movie.casts}}" wx:key="ScrollMovieCasts">
-          <image class="avatar" src="{{item.avatars.large}}"></image>
-          <text class="name">{{item.name}}</text>
-        </view>
-      </scroll-view>
-    </view>  
-  </scroll-view>
+    </scroll-view>
+    <view class="mic-title">
+      <text class="icon"></text>热门评论</view>
+    <block class="mic-comments" wx:for="{{movie.popular_reviews}}" wx:key="*this">
+      <view wx:if="{{ index < 10 }}"> {{item.title }}</view>
+    </block>
+  </view>
 </view>

@@ -157,12 +157,16 @@
   text-overflow: ellipsis
 }
 
-.mill-pubdates{
+.mill-pubdates {
   margin-top: 10rpx;
   color: aquamarine;
 }
 
-.mic-photos{
+.mic-photos {
   margin-bottom: 20rpx;
   position: relative;
+}
+
+.mic-photos .slide-image {
+  width: 100%;
 }
